@@ -1,12 +1,12 @@
 # cafe-inspiration-backend
 
 1) Setup MySQL via docker:
-```
+```Shell
 docker run --name cafe-mysql -e MYSQL_ROOT_PASSWORD=<password> -d -p 9000:3306 -p 9001:33060 mysql:8.0
 ```
 
 2) Setup MySQL database script:
-```
+```SQL.mysql
 CREATE DATABASE IF NOT EXISTS CAFE_INSPIRATION;
 
 USE CAFE_INSPIRATION;
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS users (
 ```
 3) Change application.properties in the Java project:
 
-```
+```Java Properties
 # Spring Data JPA
 spring.jpa.hibernate.ddl-auto=none
 spring.datasource.url=jdbc:mysql://localhost:9000/CAFE_INSPIRATION
